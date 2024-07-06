@@ -1,0 +1,17 @@
+442 Find all duplicates in an array
+Statement:-
+Given an integer array nums of length n where all the integers of nums are in the range [1, n] and
+each integer appears once or twice, return an array of all the integers that appears twice.
+You must write an algorithm that runs in O(n) time and uses only constant extra space.
+Example 1:
+Input: nums = [4,3,2,7,8,2,3,1]
+Output: [2,3]
+code:-
+l=list(map(int,input().split(",")))
+l1=[]
+for i in range(len(l)):
+    index=abs(l[i])-1
+    if l[index]<0:
+        l1.append((abs(l[i])))#l1.append(index+1)
+    l[index]=l[index]*(-1)
+print(l1)
